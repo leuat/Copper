@@ -21,6 +21,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # In order to do so, uncomment the following line.
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
+    QMAKE_CXXFLAGS += -fopenmp
+    QMAKE_CXXFLAGS +=  -Wno-unused-variable -Wno-unused-parameter -Wno-sign-compare -Wno-comment -Wno-parentheses -Wno-delete-non-virtual-dtor -Wno-missing-noreturn
+    LIBS += -fopenmp
+#    QMAKE_CXXFLAGS +=  -Ofast
 
 CONFIG += c++11
 
@@ -29,13 +33,15 @@ SOURCES += \
         mainwindow.cpp \
     source/base/copperdata.cpp \
     source/base/copperdatafactory.cpp \
-    source/forms/formcopperdataviewer.cpp
+    source/forms/formcopperdataviewer.cpp \
+    source/base/copperbrowser.cpp
 
 HEADERS += \
         mainwindow.h \
     source/base/copperdata.h \
     source/base/copperdatafactory.h \
-    source/forms/formcopperdataviewer.h
+    source/forms/formcopperdataviewer.h \
+    source/base/copperbrowser.h
 
 FORMS += \
         mainwindow.ui \

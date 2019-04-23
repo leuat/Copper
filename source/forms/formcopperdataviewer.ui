@@ -12,7 +12,7 @@
   </property>
   <property name="font">
    <font>
-    <family>Courier 10 Pitch</family>
+    <family>Monospace</family>
    </font>
   </property>
   <property name="windowTitle">
@@ -20,12 +20,14 @@
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
-    <widget class="QTextBrowser" name="txtData">
+    <widget class="CopperBrowser" name="txtData">
      <property name="font">
       <font>
+       <family>Mitra Mono</family>
        <pointsize>14</pointsize>
        <weight>50</weight>
        <bold>false</bold>
+       <kerning>false</kerning>
       </font>
      </property>
     </widget>
@@ -56,6 +58,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CopperBrowser</class>
+   <extends>QTextBrowser</extends>
+   <header>source/base/copperbrowser.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

@@ -5,6 +5,7 @@
 #include <QString>
 #include <QVector>
 #include <QByteArray>
+#include <QPoint>
 
 class CopperData
 {
@@ -18,7 +19,10 @@ public:
 
     void Initialize(int w, int h, int dataLength, QString name);
 
-    void getText(QString& text);
+    void getText(QString& text, QPoint focus, QPoint cur);
+
+    int getTotalWidth();
+    int getTotalHeight();
 
     QString m_name;
     QByteArray m_data;
